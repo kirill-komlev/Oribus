@@ -7,7 +7,7 @@ import { NavbarLink } from './NavbarLink'
 
 export function Navbar() {
 	return (
-		<nav className='px-6 py-4 flex flex-col gap-4 items-center border-r-2 border-gray-200'>
+		<nav className='p-4 flex flex-col gap-4 items-center border-r-2 border-gray-200'>
 			<img
 				src={Logo}
 				alt='Oripio Design'
@@ -15,7 +15,7 @@ export function Navbar() {
 			/>
 			<hr className='w-full border border-gray-100' />
 			<div className='flex flex-col gap-4 items-center'>
-				<NavbarLink to={PAGE_CONFIG.home}>
+				<NavbarLink to={PAGE_CONFIG.dashboard}>
 					<House strokeWidth={1.5} />
 				</NavbarLink>
 				<NavbarLink to={PAGE_CONFIG.none}>
