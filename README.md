@@ -1,6 +1,6 @@
-# Project Management Dashboard
+# Oribus
 
-Project Management Dashboard — это современный веб-интерфейс для управления проектами, задачами и командой. Дизайн приложения основан на работе дизайнера с Dribbble: [Project Management Dashboard Design](https://dribbble.com/shots/27529254-Project-Management-Dashboard-Design).
+Oribus — это современный веб-интерфейс для управления проектами, задачами и командой. Дизайн приложения основан на работе дизайнера с Dribbble: [Project Management Dashboard Design](https://dribbble.com/shots/27529254-Project-Management-Dashboard-Design).
 
 ## 🛠 Стек технологий
 
