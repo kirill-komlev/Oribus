@@ -1,16 +1,39 @@
-# React + Vite
+# Project Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Management Dashboard — это современный веб-интерфейс для управления проектами, задачами и командой. Дизайн приложения основан на работе дизайнера с Dribbble: [Project Management Dashboard Design](https://dribbble.com/shots/27529254-Project-Management-Dashboard-Design).
 
-Currently, two official plugins are available:
+## 🛠 Стек технологий
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Основные зависимости:
 
-## React Compiler
+- **React 19.2.7** — современный JavaScript-фреймворк для создания пользовательских интерфейсов
+- **React Router 8.1.0** — нативная библиотека роутинга для React приложений
+- **Tailwind CSS 4.3.2** — utility-first CSS framework для стилизации
+- **Vite 8.1.1** — быстрая сборка и разработка с поддержкой HMR
+- **Lucide React 1.23.0** — библиотека иконок для React
+- **Zustand 5.0.14** — минимальный state management для React
+- **clsx & tailwind-merge** — утилиты для работы с классами CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🏗 Архитектура проекта
 
-## Expanding the ESLint configuration
+Проект построен с использованием современных паттернов и лучших практик:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Структура папок:
+
+```
+src/
+├── app/                 # Основное приложение
+│   ├── router/         # Конфигурация роутинга
+│   └── styles/         # Глобальные стили
+├── components/         # UI компоненты
+│   ├── dashboard-header/
+│   ├── navbar/
+│   └── sidebar/
+├── configs/           # Конфигурационные данные
+├── contexts/          # React Context для глобального состояния
+├── hooks/             # Пользовательские хуки
+├── layouts/           # Макеты страниц
+├── pages/             # Страницы приложения
+├── shared/            # Общие компоненты (Button, Chip, Container и т.д.)
+└── stores/            # State management с Zustand
+```
