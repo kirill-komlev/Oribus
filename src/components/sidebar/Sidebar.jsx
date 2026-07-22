@@ -4,7 +4,8 @@ import { SidebarListLink } from './SidebarListLink'
 import { SidebarListTitle } from './SidebarListTitle'
 import { SidebarList } from './SidebarList'
 import { SidebarListAction } from './SidebarListAction'
-import { PAGE_CONFIG } from '../../configs/page-config'
+
+import { PAGE_CONFIG } from 'configs/page-config'
 
 const mainMenuList = [
 	{
@@ -162,8 +163,9 @@ export function Sidebar() {
 
 			<SidebarList>
 				<SidebarListTitle>Main Menu</SidebarListTitle>
-				{mainMenuList.map(item => (
+				{mainMenuList.map((item, index) => (
 					<SidebarListLink
+						key={`sidebar-link-main-menu-${index}`}
 						to={item.to}
 						icon={item.icon}
 						comment={item.comment}
@@ -185,8 +187,9 @@ export function Sidebar() {
 
 			<SidebarList>
 				<SidebarListTitle>Work Spaces</SidebarListTitle>
-				{workSpacesList.map(item => (
+				{workSpacesList.map((item, index) => (
 					<SidebarListLink
+						key={`sidebar-link-work-spaces-${index}`}
 						to={item.to}
 						icon={item.icon}
 						comment={item.comment}
@@ -208,8 +211,9 @@ export function Sidebar() {
 
 			<SidebarList>
 				<SidebarListTitle>Channels</SidebarListTitle>
-				{channelsList.map(item => (
+				{channelsList.map((item, index) => (
 					<SidebarListLink
+						key={`sidebar-link-channels-${index}`}
 						to={item.to}
 						icon={item.icon}
 						comment={item.comment}
@@ -230,8 +234,9 @@ export function Sidebar() {
 			</SidebarList>
 			<SidebarList>
 				<SidebarListTitle>Direct Messages</SidebarListTitle>
-				{messagesList.map(item => (
+				{messagesList.map((item, index) => (
 					<SidebarListLink
+						key={`sidebar-link-direct-messages-${index}`}
 						to={item.to}
 						icon={item.icon}
 						comment={item.comment}
