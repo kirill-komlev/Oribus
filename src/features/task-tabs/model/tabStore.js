@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
+import { createJSONStorage, persist } from 'zustand/middleware'
 
 export const useTabStore = create(
 	persist(
@@ -9,7 +9,7 @@ export const useTabStore = create(
 		}),
 		{
 			name: 'tasks-tab-storage', // ключ в sessionStorage
-			getStorage: () => sessionStorage, // используем sessionStorage (по умолчанию localStorage)
+			storage: createJSONStorage(() => sessionStorage), // используем sessionStorage (по умолчанию localStorage)
 		},
 	),
 )
