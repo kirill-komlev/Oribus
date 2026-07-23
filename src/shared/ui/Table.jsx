@@ -2,10 +2,10 @@ import { useState } from 'react'
 
 import { ChevronDown, ChevronUp, Ellipsis, Flag, UserRound, EyeOff } from 'lucide-react'
 
-import { USERS_CONFIG } from 'configs/users-config'
-import { TAGS_CONFIG } from 'configs/tags-config'
+import { USERS_CONFIG } from 'shared/configs/users-config'
+import { TAGS_CONFIG } from 'shared/configs/tags-config'
 
-import { cn } from 'libs/cn/cn'
+import { cn } from 'shared/libs/cn/cn'
 
 import { Chip } from './Chip'
 import { Tags } from './Tags'

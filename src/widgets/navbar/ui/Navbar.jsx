@@ -2,7 +2,8 @@ import { Calendar, ChartLine, House, ListChecks, LogOut, Settings, Sparkles, Use
 
 import Logo from '/icons/logo.png'
 
-import { PAGE_CONFIG } from 'configs/page-config'
+import { PAGE_CONFIG } from 'shared/configs/page-config'
+
 import { NavbarLink } from './NavbarLink'
 
 export function Navbar() {

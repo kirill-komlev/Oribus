@@ -1,8 +1,8 @@
 import { PlusCircle } from 'lucide-react'
 
-import { useTabStore } from 'stores/tabStore'
+import { useTabStore } from 'shared/stores/tabStore'
 
-import { cn } from 'libs/cn/cn'
+import { cn } from 'shared/libs/cn/cn'
 
 export function Tabs({ tabs }) {
 	const tab = useTabStore(state => state.tab)
@@ -29,7 +29,7 @@ export function Tabs({ tabs }) {
 					<PlusCircle
 						size={20}
 						strokeWidth={1.5}
-						className=' text-gray-500 hover:text-gray-600 transition-all cursor-pointer'
+						className='text-gray-500 hover:text-gray-600 transition-all cursor-pointer'
 					/>
 				</div>
 			</div>

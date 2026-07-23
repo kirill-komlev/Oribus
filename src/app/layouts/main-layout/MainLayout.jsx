@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router'
 
-import { Sidebar } from 'components/sidebar/Sidebar'
-import { Navbar } from 'components/navbar/Navbar'
+import { Navbar } from 'widgets/navbar'
+import { Sidebar } from 'widgets/sidebar'
 
 export function MainLayout() {
 	return (

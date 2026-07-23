@@ -5,7 +5,7 @@ import { SidebarListTitle } from './SidebarListTitle'
 import { SidebarList } from './SidebarList'
 import { SidebarListAction } from './SidebarListAction'
 
-import { PAGE_CONFIG } from 'configs/page-config'
+import { PAGE_CONFIG } from 'shared/configs/page-config'
 
 const mainMenuList = [
 	{

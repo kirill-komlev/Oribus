@@ -1,14 +1,14 @@
 import { CalendarDays, CircleAlert, Clock, Ellipsis, LayoutDashboard, ListChecks, Plus, Settings, SquareActivity, Users } from 'lucide-react'
 
-import { inDesignData, inDevelopmentData, reviewData, shippedData } from 'configs/data-config'
+import { inDesignData, inDevelopmentData, reviewData, shippedData } from 'shared/configs/data-config'
 
-import { useTitle } from 'hooks/useTitle'
+import { useTitle } from 'shared/hooks/useTitle'
 
-import { Button } from 'shared/Button'
-import { CircleButton } from 'shared/CircleButton'
-import { Container } from 'shared/Container'
-import { Table } from 'shared/Table'
-import { Tabs } from 'shared/Tabs'
+import { Button } from 'shared/ui/Button'
+import { CircleButton } from 'shared/ui/CircleButton'
+import { Container } from 'shared/ui/Container'
+import { Table } from 'shared/ui/Table'
+import { Tabs } from 'shared/ui/Tabs'
 
 const tabs = [
 	{

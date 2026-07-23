@@ -1,7 +1,8 @@
-import { Outlet } from 'react-router'
-import { DashboardHeader } from '../../components/dashboard-header/DashboardHeader'
 import { useState } from 'react'
-import { TitleContext } from 'contexts/TitleContext'
+import { Outlet } from 'react-router'
+
+import { TitleContext } from 'shared/contexts/TitleContext'
+import { DashboardHeader } from 'widgets/dashboard-header'
 
 export function DashboardLayout() {
 	const [title, setTitle] = useState('Dashboard')
