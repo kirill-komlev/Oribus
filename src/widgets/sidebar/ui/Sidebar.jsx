@@ -136,7 +136,7 @@ const messagesList = [
 				strokeWidth={2}
 			/>
 		),
-		text: `mikasa-ackerman@gmail.com`,
+		text: 'mikasa-ackerman@gmail.com',
 	},
 	{
 		to: `${PAGE_CONFIG.directMessage}/DM3435346`,
@@ -154,107 +154,116 @@ const messagesList = [
 
 export function Sidebar() {
 	return (
-		<div className='py-4 flex flex-col gap-4 max-w-72 w-auto overflow-y-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent'>
-			<div className='px-6'>
+		// Внешний контейнер – занимает всю высоту и использует flex-колонку
+		<div className='h-screen flex flex-col max-w-72 w-auto'>
+			{/* Закреплённая часть: логотип и разделитель */}
+			<div className='px-6 py-4 shrink-0'>
 				<h3 className='font-semibold text-xl'>Oripio Design</h3>
 				<h5 className='text-sm text-gray-600'>Team Plan</h5>
 			</div>
-			<hr className='w-full border border-gray-200' />
+			<hr className='w-full border border-gray-200 shrink-0' />
 
-			<SidebarList>
-				<SidebarListTitle>Main Menu</SidebarListTitle>
-				{mainMenuList.map((item, index) => (
-					<SidebarListLink
-						key={`sidebar-link-main-menu-${index}`}
-						to={item.to}
-						icon={item.icon}
-						comment={item.comment}
-					>
-						{item.text}
-					</SidebarListLink>
-				))}
-				<SidebarListAction
-					icon={
-						<Ellipsis
-							size={20}
-							strokeWidth={1.5}
-						/>
-					}
-				>
-					More
-				</SidebarListAction>
-			</SidebarList>
+			{/* Скроллируемая область со списками */}
+			<div className='pt-4 flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent'>
+				{/* Внутренний контейнер для сохранения отступов между списками */}
+				<div className='flex flex-col gap-4'>
+					<SidebarList>
+						<SidebarListTitle>Main Menu</SidebarListTitle>
+						{mainMenuList.map((item, index) => (
+							<SidebarListLink
+								key={`sidebar-link-main-menu-${index}`}
+								to={item.to}
+								icon={item.icon}
+								comment={item.comment}
+							>
+								{item.text}
+							</SidebarListLink>
+						))}
+						<SidebarListAction
+							icon={
+								<Ellipsis
+									size={20}
+									strokeWidth={1.5}
+								/>
+							}
+						>
+							More
+						</SidebarListAction>
+					</SidebarList>
 
-			<SidebarList>
-				<SidebarListTitle>Work Spaces</SidebarListTitle>
-				{workSpacesList.map((item, index) => (
-					<SidebarListLink
-						key={`sidebar-link-work-spaces-${index}`}
-						to={item.to}
-						icon={item.icon}
-						comment={item.comment}
-					>
-						{item.text}
-					</SidebarListLink>
-				))}
-				<SidebarListAction
-					icon={
-						<Plus
-							size={20}
-							strokeWidth={1.5}
-						/>
-					}
-				>
-					New Space
-				</SidebarListAction>
-			</SidebarList>
+					<SidebarList>
+						<SidebarListTitle>Work Spaces</SidebarListTitle>
+						{workSpacesList.map((item, index) => (
+							<SidebarListLink
+								key={`sidebar-link-work-spaces-${index}`}
+								to={item.to}
+								icon={item.icon}
+								comment={item.comment}
+							>
+								{item.text}
+							</SidebarListLink>
+						))}
+						<SidebarListAction
+							icon={
+								<Plus
+									size={20}
+									strokeWidth={1.5}
+								/>
+							}
+						>
+							New Space
+						</SidebarListAction>
+					</SidebarList>
 
-			<SidebarList>
-				<SidebarListTitle>Channels</SidebarListTitle>
-				{channelsList.map((item, index) => (
-					<SidebarListLink
-						key={`sidebar-link-channels-${index}`}
-						to={item.to}
-						icon={item.icon}
-						comment={item.comment}
-					>
-						{item.text}
-					</SidebarListLink>
-				))}
-				<SidebarListAction
-					icon={
-						<Plus
-							size={20}
-							strokeWidth={1.5}
-						/>
-					}
-				>
-					Add Channel
-				</SidebarListAction>
-			</SidebarList>
-			<SidebarList>
-				<SidebarListTitle>Direct Messages</SidebarListTitle>
-				{messagesList.map((item, index) => (
-					<SidebarListLink
-						key={`sidebar-link-direct-messages-${index}`}
-						to={item.to}
-						icon={item.icon}
-						comment={item.comment}
-					>
-						{item.text}
-					</SidebarListLink>
-				))}
-				<SidebarListAction
-					icon={
-						<Plus
-							size={20}
-							strokeWidth={1.5}
-						/>
-					}
-				>
-					New Message
-				</SidebarListAction>
-			</SidebarList>
+					<SidebarList>
+						<SidebarListTitle>Channels</SidebarListTitle>
+						{channelsList.map((item, index) => (
+							<SidebarListLink
+								key={`sidebar-link-channels-${index}`}
+								to={item.to}
+								icon={item.icon}
+								comment={item.comment}
+							>
+								{item.text}
+							</SidebarListLink>
+						))}
+						<SidebarListAction
+							icon={
+								<Plus
+									size={20}
+									strokeWidth={1.5}
+								/>
+							}
+						>
+							Add Channel
+						</SidebarListAction>
+					</SidebarList>
+
+					<SidebarList>
+						<SidebarListTitle>Direct Messages</SidebarListTitle>
+						{messagesList.map((item, index) => (
+							<SidebarListLink
+								key={`sidebar-link-direct-messages-${index}`}
+								to={item.to}
+								icon={item.icon}
+								comment={item.comment}
+							>
+								{item.text}
+							</SidebarListLink>
+						))}
+						<SidebarListAction
+							icon={
+								<Plus
+									size={20}
+									strokeWidth={1.5}
+								/>
+							}
+						>
+							New Message
+						</SidebarListAction>
+					</SidebarList>
+				</div>
+			</div>
 		</div>
 	)
 }

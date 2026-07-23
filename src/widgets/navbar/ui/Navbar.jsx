@@ -8,7 +8,7 @@ import { NavbarLink } from './NavbarLink'
 
 export function Navbar() {
 	return (
-		<nav className='p-4 flex flex-col gap-4 items-center border-r-2 border-gray-200'>
+		<nav className='p-4 flex flex-col gap-4 items-center border-r-2 border-gray-200 h-screen'>
 			<img
 				src={Logo}
 				alt='Oripio Design'

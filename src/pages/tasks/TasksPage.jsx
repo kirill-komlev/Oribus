@@ -122,9 +122,9 @@ export function TasksPage() {
 					</div>
 				</Container>
 			</div>
-			<div>
+			<div className='my-4'>
 				{activeTab === 0 && (
-					<Container className='my-6 p-2 flex flex-col gap-2 bg-gray-50 rounded-2xl'>
+					<Container className='p-2 flex flex-col gap-4 bg-gray-50 rounded-2xl'>
 						<Table
 							data={shippedData}
 							status='shipped'
