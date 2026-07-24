@@ -19,7 +19,7 @@ export function DashboardLayout() {
 				<DashboardHeader title={title} />
 
 				{/* Разделитель – тоже фиксированная часть */}
-				<hr className='border border-gray-200 flex-shrink-0' />
+				<hr className='border border-gray-200 shrink-0' />
 
 				{/* 
           Контентная область:
