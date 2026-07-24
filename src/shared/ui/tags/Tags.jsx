@@ -1,17 +1,8 @@
-// eslint-disable-next-line no-unused-vars
-const possibility = [
-	'bg-red-100',
-	'text-red-600',
-	'bg-blue-100',
-	'text-blue-600',
-	'bg-violet-100',
-	'text-violet-600',
-	'bg-yellow-100',
-	'text-yellow-600',
-	'bg-gray-100',
-	'text-gray-600',
-]
+import { TAG_COLORS } from 'shared/configs/tag-colors'
+import { cn } from 'shared/libs/cn'
 
-export function Tags({ color, children }) {
-	return <div className={`px-1.5 py-1 bg-${color}-100 rounded-full text-xs text-${color}-600`}>{children}</div>
+export function Tags({ color, label }) {
+	const styles = TAG_COLORS[color] || TAG_COLORS.blue
+
+	return <div className={cn('px-1.5 py-1 rounded-full text-xs cursor-default', styles.bg, styles.text, styles.hover)}>{label}</div>
 }

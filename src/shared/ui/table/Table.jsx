@@ -103,15 +103,17 @@ function OpenTable({ data }) {
 															<Tags
 																key={tag}
 																color={getTagInfo(tag).color}
-															>
-																{getTagInfo(tag).name}
-															</Tags>
+																label={getTagInfo(tag).name}
+															/>
 														)
 													}
 												})}
 												{cell.tags.length > 2 && (
 													<div className='relative group'>
-														<Tags color='gray'>+{cell.tags.length - 2}</Tags>{' '}
+														<Tags
+															color='gray'
+															label={`+${cell.tags.length - 2}`}
+														></Tags>{' '}
 														<div className='absolute hidden -top-8 left-1/2 transform -translate-x-1/2 group-hover:flex items-center gap-1'>
 															{cell.tags.map((tag, index) => {
 																if (index > 1) {
@@ -119,9 +121,8 @@ function OpenTable({ data }) {
 																		<Tags
 																			key={tag}
 																			color={getTagInfo(tag).color}
-																		>
-																			{getTagInfo(tag).name}
-																		</Tags>
+																			label={getTagInfo(tag).name}
+																		/>
 																	)
 																}
 															})}
