@@ -5,14 +5,14 @@ import Logo from '/icons/logo.png'
 import { PAGE_CONFIG } from 'shared/configs/page-config'
 
 import { NavbarLink } from './NavbarLink'
+import { LogoIcon } from 'shared/ui/icon'
 
 export function Navbar() {
 	return (
 		<nav className='p-4 flex flex-col gap-4 items-center border-r-2 border-gray-200 h-screen'>
-			<img
-				src={Logo}
-				alt='Oripio Design'
-				className='w-12 h-12'
+			<LogoIcon
+				fill='#ffffff'
+				className='w-12 h-12 p-2 rounded-2xl bg-gray-900 stroke-gray-900'
 			/>
 			<hr className='w-full border border-gray-100' />
 			<div className='flex flex-col gap-4 items-center'>
