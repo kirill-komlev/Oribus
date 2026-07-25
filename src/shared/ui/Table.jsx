@@ -2,17 +2,15 @@ import { useState } from 'react'
 
 import { ChevronDown, ChevronUp, Ellipsis, Flag, UserRound, EyeOff } from 'lucide-react'
 
-import { USERS_CONFIG } from 'shared/configs/users-config'
-import { TAGS_CONFIG } from 'shared/configs/tags-config'
-
-import { cn } from 'shared/libs/cn'
-import { Chip, Tags } from '..'
+import { TAGS, USERS } from 'shared/configs'
+import { cn } from 'shared/libs'
+import { Chip, Icon, Tags } from '.'
 
 const headers = ['Project', 'Assignee', 'Due Date', 'Priority']
 
-const usersMap = new Map(USERS_CONFIG.map(u => [u.id, u.name]))
+const usersMap = new Map(USERS.map(u => [u.id, u.name]))
 
-const tagMap = new Map(TAGS_CONFIG.map(tag => [tag.id, tag]))
+const tagMap = new Map(TAGS.map(tag => [tag.id, tag]))
 
 // Функция-получатель
 function getTagInfo(id) {
@@ -190,10 +188,10 @@ function OpenTable({ data }) {
 function HiddenTable({ dataLength }) {
 	return (
 		<div className='mt-2 px-4 py-3 flex items-center gap-3 border border-gray-200 rounded-2xl bg-white'>
-			<EyeOff
+			<Icon
+				icon={EyeOff}
+				size='small'
 				className='text-gray-500'
-				strokeWidth='1.5'
-				size={20}
 			/>
 			<p className='text-gray-500'>{dataLength} tasks are hidden in this view</p>
 		</div>

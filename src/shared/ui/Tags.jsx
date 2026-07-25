@@ -1,5 +1,5 @@
-import { TAG_COLORS } from 'shared/configs/tag-colors'
-import { cn } from 'shared/libs/cn'
+import { TAG_COLORS } from 'shared/configs'
+import { cn } from 'shared/libs'
 
 export function Tags({ color, label }) {
 	const styles = TAG_COLORS[color] || TAG_COLORS.blue

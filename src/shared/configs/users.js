@@ -1,4 +1,4 @@
-export const USERS_CONFIG = [
+export const USERS = [
 	{ id: 1001, name: 'Анна Ковалёва' },
 	{ id: 1002, name: 'Игорь Петров' },
 	{ id: 1003, name: 'Мария Смирнова' },

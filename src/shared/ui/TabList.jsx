@@ -1,4 +1,4 @@
-import { cn } from 'shared/libs/cn'
+import { cn } from 'shared/libs'
 
 /**
  * TabList – контейнер для заголовков вкладок.

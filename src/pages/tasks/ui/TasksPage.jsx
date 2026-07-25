@@ -1,19 +1,19 @@
 import { CalendarDays, CircleAlert, Clock, Ellipsis, LayoutDashboard, ListChecks, Plus, Settings, SquareActivity, Users } from 'lucide-react'
 
-import { useTabStore } from 'features/task-tabs/model/tabStore'
+import { useTabStore } from 'features/task-tabs'
 
-import { inDesignData, inDevelopmentData, reviewData, shippedData } from 'shared/configs/data-config'
-import { useTitle } from 'shared/hooks/useTitle'
-import { Button, CircleButton, Container, Table, Tab, TabList } from 'shared/ui'
+import { inDesignData, inDevelopmentData, reviewData, shippedData } from 'shared/configs'
+import { useTitle } from 'shared/hooks'
+import { Button, CircleButton, Container, Table, Tab, TabList, Icon } from 'shared/ui'
 
 const tabs = [
 	{
 		value: 0,
 		label: 'List view',
 		icon: (
-			<ListChecks
-				size={20}
-				strokeWidth={1.5}
+			<Icon
+				icon={ListChecks}
+				size='small'
 			/>
 		),
 	},
@@ -21,9 +21,9 @@ const tabs = [
 		value: 1,
 		label: 'Board view',
 		icon: (
-			<LayoutDashboard
-				size={20}
-				strokeWidth={1.5}
+			<Icon
+				icon={LayoutDashboard}
+				size='small'
 			/>
 		),
 	},
@@ -31,9 +31,9 @@ const tabs = [
 		value: 2,
 		label: 'Calendar view',
 		icon: (
-			<CalendarDays
-				size={20}
-				strokeWidth={1.5}
+			<Icon
+				icon={CalendarDays}
+				size='small'
 			/>
 		),
 	},
@@ -41,9 +41,9 @@ const tabs = [
 		value: 3,
 		label: 'Timeline view',
 		icon: (
-			<Clock
-				size={20}
-				strokeWidth={1.5}
+			<Icon
+				icon={Clock}
+				size='small'
 			/>
 		),
 	},
@@ -61,9 +61,9 @@ export function TasksPage() {
 						<div className='flex flex-col gap-1'>
 							<div className='flex items-center gap-2'>
 								<div className='text-2xl font-medium'>Oripio - Design Tasks</div>
-								<CircleAlert
-									strokeWidth={1.5}
-									size={20}
+								<Icon
+									icon={CircleAlert}
+									size='small'
 									className='text-gray-500 cursor-pointer'
 								/>
 							</div>
@@ -71,23 +71,23 @@ export function TasksPage() {
 						</div>
 						<div className='flex gap-2 items-center'>
 							<Button>
-								<SquareActivity
-									strokeWidth={1.5}
-									size={20}
+								<Icon
+									icon={SquareActivity}
+									size='small'
 								/>
 								Activity
 							</Button>
 							<Button>
-								<Users
-									strokeWidth={1.5}
-									size={20}
+								<Icon
+									icon={Users}
+									size='small'
 								/>
 								Member
 							</Button>
 							<CircleButton>
-								<Ellipsis
-									strokeWidth={1.5}
-									size={20}
+								<Icon
+									icon={Ellipsis}
+									size='small'
 								/>
 							</CircleButton>
 						</div>
@@ -108,14 +108,14 @@ export function TasksPage() {
 
 						<div className='inline-flex gap-2 items-center justify-between'>
 							<Button size='large'>
-								<Settings strokeWidth={1.5} />
+								<Icon icon={Settings} />
 								Customize
 							</Button>
 							<Button
 								size='large'
 								variant='primary'
 							>
-								<Plus strokeWidth={1.5} />
+								<Icon icon={Plus} />
 								New Project
 							</Button>
 						</div>

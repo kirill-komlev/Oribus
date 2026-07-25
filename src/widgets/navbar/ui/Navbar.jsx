@@ -1,11 +1,9 @@
 import { Calendar, ChartLine, House, ListChecks, LogOut, Settings, Sparkles, Users } from 'lucide-react'
 
-import Logo from '/icons/logo.png'
-
-import { PAGE_CONFIG } from 'shared/configs/page-config'
-
 import { NavbarLink } from './NavbarLink'
-import { LogoIcon } from 'shared/ui/icon'
+
+import { Icon, LogoIcon } from 'shared/ui'
+import { PAGE_CONFIG } from 'shared/configs'
 
 export function Navbar() {
 	return (
@@ -17,31 +15,31 @@ export function Navbar() {
 			<hr className='w-full border border-gray-100' />
 			<div className='flex flex-col gap-4 items-center'>
 				<NavbarLink to={PAGE_CONFIG.dashboard}>
-					<House strokeWidth={1.5} />
+					<Icon icon={House} />
 				</NavbarLink>
 				<NavbarLink to={PAGE_CONFIG.none}>
-					<ListChecks strokeWidth={1.5} />
+					<Icon icon={ListChecks} />
 				</NavbarLink>
 				<NavbarLink to={PAGE_CONFIG.none}>
-					<Users strokeWidth={1.5} />
+					<Icon icon={Users} />
 				</NavbarLink>
 				<NavbarLink to={PAGE_CONFIG.none}>
-					<Calendar strokeWidth={1.5} />
+					<Icon icon={Calendar} />
 				</NavbarLink>
 				<NavbarLink to={PAGE_CONFIG.none}>
-					<ChartLine strokeWidth={1.5} />
+					<Icon icon={ChartLine} />
 				</NavbarLink>
 				<NavbarLink to={PAGE_CONFIG.none}>
-					<Sparkles strokeWidth={1.5} />
+					<Icon icon={Sparkles} />
 				</NavbarLink>
 			</div>
 
 			<div className='mt-auto flex flex-col gap-4 items-center'>
 				<NavbarLink to={PAGE_CONFIG.none}>
-					<Settings strokeWidth={1.5} />
+					<Icon icon={Settings} />
 				</NavbarLink>
 				<NavbarLink to={PAGE_CONFIG.none}>
-					<LogOut strokeWidth={1.5} />
+					<Icon icon={LogOut} />
 				</NavbarLink>
 			</div>
 		</nav>

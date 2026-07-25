@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router'
 
-import { MainLayout } from 'app/layouts/main-layout/MainLayout'
-import { DashboardLayout } from 'app/layouts/dashboard-layout/DashboardLayout'
+import { MainLayout } from 'app/layouts/main-layout'
+import { DashboardLayout } from 'app/layouts/dashboard-layout'
 
-import { DashboardPage } from 'pages/dashboard/DashboardPage'
-import { TasksPage } from 'pages/tasks/TasksPage'
+import { DashboardPage } from 'pages/dashboard'
+import { TasksPage } from 'pages/tasks'
 
-import { PAGE_CONFIG } from 'shared/configs/page-config'
+import { PAGE_CONFIG } from 'shared/configs'
 
 export function Router() {
 	return (

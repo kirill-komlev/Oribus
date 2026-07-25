@@ -1,4 +1,4 @@
-export const TAGS_CONFIG = [
+export const TAGS = [
 	{ id: 1, name: 'UI Design', color: 'red' },
 	{ id: 2, name: 'Dashboard', color: 'blue' },
 	{ id: 3, name: 'Feature', color: 'violet' },

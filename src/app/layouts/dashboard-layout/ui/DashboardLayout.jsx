@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router'
-import { TitleContext } from 'shared/contexts/TitleContext'
+import { TitleContext } from 'shared/contexts'
 import { DashboardHeader } from 'widgets/dashboard-header'
 
 export function DashboardLayout() {
