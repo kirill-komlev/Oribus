@@ -1,4 +1,4 @@
-import { Icon } from 'shared/ui/icon'
+import { Icon } from 'shared/ui'
 import { CircleDashed, ClipboardList, CodeXml, Ellipsis, Hash, LayoutGrid, MessageSquareMore, Pencil, Plus, Settings, UserRound } from 'lucide-react'
 
 import { SidebarListLink } from './SidebarListLink'
