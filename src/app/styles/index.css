@@ -6,3 +6,9 @@ body {
 
 	box-sizing: border-box;
 }
+
+@layer utilities {
+	.transition-base {
+		transition: all 0.15s ease-in-out;
+	}
+}
