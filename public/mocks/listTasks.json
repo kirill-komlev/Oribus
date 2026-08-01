@@ -1,0 +1,164 @@
+{
+	"columns": [
+		{ "label": "Project", "key": "project", "span": 2 },
+		{ "label": "Assignee", "key": "assignees" },
+		{ "label": "Due Date", "key": "due_date" },
+		{ "label": "Priority", "key": "priority" }
+	],
+	"tasks": [
+		{
+			"id": 1,
+			"project": {
+				"text": "Finalize Dashboard Empty State Design",
+				"tags": [1, 2]
+			},
+			"assignees": [1001],
+			"due_date": "Saturday",
+			"priority": "High",
+			"status": "shipped"
+		},
+		{
+			"id": 2,
+			"project": {
+				"text": "Implement Workspace Search Functionality",
+				"tags": [3, 4, 2, 5]
+			},
+			"assignees": [1002, 1003],
+			"due_date": "Monday",
+			"priority": "Medium",
+			"status": "shipped"
+		},
+		{
+			"id": 3,
+			"project": {
+				"text": "Optimize Sidebar Navigation Experience",
+				"tags": [6, 7, 8, 9]
+			},
+			"assignees": [1004, 1002, 1005],
+			"due_date": "Monday",
+			"priority": "Medium",
+			"status": "shipped"
+		},
+		{
+			"id": 4,
+			"project": {
+				"text": "Fix Login Authentication Error",
+				"tags": [10, 11, 12]
+			},
+			"assignees": [1006, 1002],
+			"due_date": "Wednesday",
+			"priority": "Normal",
+			"status": "shipped"
+		},
+		{
+			"id": 5,
+			"project": {
+				"text": "Review User Profile Page",
+				"tags": [6, 8]
+			},
+			"assignees": [1003, 1005],
+			"due_date": "Thursday",
+			"priority": "Medium",
+			"status": "review"
+		},
+		{
+			"id": 6,
+			"project": {
+				"text": "Review Payment Flow",
+				"tags": [3, 12]
+			},
+			"assignees": [1002, 1006],
+			"due_date": "Friday",
+			"priority": "High",
+			"status": "review"
+		},
+		{
+			"id": 7,
+			"project": {
+				"text": "Review API Documentation",
+				"tags": [12, 11]
+			},
+			"assignees": [1004, 1001],
+			"due_date": "Thursday",
+			"priority": "Normal",
+			"status": "review"
+		},
+		{
+			"id": 8,
+			"project": {
+				"text": "Review Dashboard Metrics",
+				"tags": [2, 3]
+			},
+			"assignees": [1005, 1002],
+			"due_date": "Friday",
+			"priority": "Medium",
+			"status": "review"
+		},
+		{
+			"id": 9,
+			"project": {
+				"text": "Build Activity Feed Component",
+				"tags": [8, 13, 14]
+			},
+			"assignees": [1002, 1003],
+			"due_date": "Sunday",
+			"priority": "Medium",
+			"status": "inDevelopment"
+		},
+		{
+			"id": 10,
+			"project": {
+				"text": "Feedback on empty state visuals",
+				"tags": [15, 16, 17]
+			},
+			"assignees": [1001, 1004],
+			"due_date": "Saturday",
+			"priority": "High",
+			"status": "inDevelopment"
+		},
+		{
+			"id": 11,
+			"project": {
+				"text": "Design New Homepage Layout",
+				"tags": [1, 2]
+			},
+			"assignees": [1001, 1003],
+			"due_date": "Tuesday",
+			"priority": "High",
+			"status": "inDesign"
+		},
+		{
+			"id": 12,
+			"project": {
+				"text": "Design Mobile App Screens",
+				"tags": [1, 7]
+			},
+			"assignees": [1006, 1002],
+			"due_date": "Wednesday",
+			"priority": "Medium",
+			"status": "inDesign"
+		},
+		{
+			"id": 13,
+			"project": {
+				"text": "Design Onboarding Flow",
+				"tags": [6, 3]
+			},
+			"assignees": [1004, 1001],
+			"due_date": "Tuesday",
+			"priority": "Normal",
+			"status": "inDesign"
+		},
+		{
+			"id": 14,
+			"project": {
+				"text": "Design Empty States for All Modules",
+				"tags": [1, 2, 6]
+			},
+			"assignees": [1003, 1005],
+			"due_date": "Wednesday",
+			"priority": "Medium",
+			"status": "inDesign"
+		}
+	]
+}
