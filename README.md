@@ -69,96 +69,30 @@ Oribus — это современный веб-интерфейс для упр
 
 ```
 tailwind-test/
-├── public/                  # Статические файлы
+├── public/
 ├── src/
 │   ├── app/                 # Конфигурация приложения
 │   │   ├── layouts/
-│   │   │   ├── dashboard-layout/  # Макет дашборда (Sidebar + Header + Content)
-│   │   │   │   └── ui/DashboardLayout.jsx
-│   │   │   └── main-layout/       # Основной макет приложения
-│   │   │       └── ui/MainLayout.jsx
 │   │   ├── router/
-│   │   │   └── Router.jsx       # Конфигурация маршрутов (React Router)
 │   │   ├── styles/
-│   │   │   └── index.css        # Глобальные стили (Tailwind)
-│   │   ├── App.jsx              # Корневой компонент
-│   │   └── main.jsx             # Точка входа
-│   ├── features/              # Бизнес-фичи
-│   │   ├── task-tabs/         # Управление вкладками задач
-│   │   │   ├── model/
-│   │   │   │   └── tabStore.js    # Zustand store для вкладок
-│   │   │   └── index.js
-│   │   └── tasks/             # Управление задачами
-│   │       ├── api/
-│   │       │   ├── index.js
-│   │       │   └── listApi.js       # API для загрузки задач
-│   │       ├── model/
-│   │       │   ├── index.js
-│   │       │   └── useListTasks.js  # Хук для получения списка задач
-│   │       └── index.js
-│   ├── pages/                 # Страницы приложения
-│   │   ├── dashboard/         # Главная страница дашборда
-│   │   │   ├── ui/DashboardPage.jsx
-│   │   │   └── index.js
-│   │   └── tasks/             # Страница управления задачами
-│   │       ├── ui/TasksPage.jsx
-│   │       └── index.js
-│   ├── shared/                # Общие модули
-│   │   ├── configs/           # Конфигурации
-│   │   │   ├── data.js            # Моковые данные
-│   │   │   ├── index.js
-│   │   │   ├── page-config.js     # Конфигурация маршрутов
-│   │   │   ├── tag-colors.js      # Цвета для тегов
-│   │   │   ├── tags.js            # Конфигурация тегов
-│   │   │   └── users.js           # Данные пользователей
-│   │   ├── contexts/          # React Context
-│   │   │   ├── TitleContext.js      # Контекст заголовка страницы
-│   │   │   └── index.js
-│   │   ├── hooks/             # Кастомные хуки
-│   │   │   ├── index.js
-│   │   │   └── useTitle.js        # Хук для управления заголовком
-│   │   ├── libs/              # Утилиты
-│   │   │   ├── cn.js              # Класс-утилита (clsx + twMerge)
-│   │   │   ├── index.js
-│   │   │   └── mockDelay.js       # Мок задержка для API
-│   │   └── ui/                # Базовые UI-компоненты
-│   │       ├── Badge.jsx          # Бейдж (счётчик уведомлений)
-│   │       ├── Button.jsx         # Кнопка (variant, size)
-│   │       ├── Chip.jsx           # Статус-чип (In Design, Review и т.д.)
-│   │       ├── CircleButton.jsx   # Круглая кнопка
-│   │       ├── Container.jsx      # Контейнер для контента
-│   │       ├── Icon.jsx           # Компонент-обёртка для иконок
-│   │       ├── LogoIcon.jsx       # Логотип приложения
-│   │       ├── Tab.jsx            # Вкладка
-│   │       ├── TabList.jsx        # Список вкладок
-│   │       ├── Table.jsx          # Таблица
-│   │       ├── TableSkeleton.jsx  # Скелетон для таблицы
-│   │       ├── Tags.jsx           # Тег с цветовой меткой
-│   │       ├── Typography.jsx     # Типографика
-│   │       └── index.js
-│   └── widgets/               # Виджеты и компоненты
-│       ├── dashboard-header/  # Верхняя панель дашборда
-│       │   ├── ui/
-│       │   │   ├── DashboardHeader.jsx
-│       │   │   ├── DashboardHeaderProfileButton.jsx
-│       │   │   ├── DashboardHeaderSearchInput.jsx
-│       │   │   └── index.js
-│       │   └── index.js
-│       ├── navbar/            # Навигационная панель
-│       │   ├── ui/
-│       │   │   ├── Navbar.jsx
-│       │   │   ├── NavbarLink.jsx
-│       │   │   └── index.js
-│       │   └── index.js
-│       └── sidebar/           # Боковая панель навигации
-│           ├── ui/
-│           │   ├── Sidebar.jsx
-│           │   ├── SidebarList.jsx
-│           │   ├── SidebarListAction.jsx
-│           │   ├── SidebarListLink.jsx
-│           │   ├── SidebarListTitle.jsx
-│           │   └── index.js
-│           └── index.js
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── features/            # Бизнес-фичи
+│   │   ├── task-tabs/
+│   │   └── tasks/
+│   ├── pages/               # Страницы приложения
+│   │   ├── dashboard/
+│   │   └── tasks/
+│   ├── shared/              # Общие модули
+│   │   ├── configs/
+│   │   ├── contexts/
+│   │   ├── hooks/
+│   │   ├── libs/
+│   │   └── ui/              # Базовые UI-компоненты
+│   └── widgets/             # Виджеты
+│       ├── dashboard-header/
+│       ├── navbar/
+│       └── sidebar/
 ├── index.html
 ├── package.json
 ├── vite.config.js
@@ -168,7 +102,7 @@ tailwind-test/
 
 ### Архитектурный подход
 
-Проект построен по принципу **feature-sliced архитектуры (FSA)**:
+Проект построен по методологии **Feature-Sliced Design (FSD)**:
 
 - **pages** — маршрутизируемые экраны приложения (DashboardPage, TasksPage)
 - **widgets** — составные блоки интерфейса (хедер, сайдбар, навбар)
@@ -185,43 +119,12 @@ tailwind-test/
 - `shared/configs/tags.js` — конфигурация тегов и цветов
 - `features/tasks/api` — API-слой для загрузки задач
 
-### Модель задачи
-
-Каждая задача содержит:
-
-| Поле | Тип | Описание |
-|------|-----|----------|
-| `id` | string | Уникальный идентификатор |
-| `title` | string | Название задачи |
-| `description` | string | Описание |
-| `status` | string | Статус (inDesign, inDevelopment, review, shipped) |
-| `tags` | string[] | Массив тегов |
-| `assignee` | object | Ответственный (пользователь) |
-| `priority` | string | Приоритет (high, medium, low) |
-| `createdAt` | string | Дата создания |
-| `dueDate` | string | Дата выполнения |
-
 ## 🎨 Дизайн и UI
 
 - **Tailwind CSS** — основная библиотека стилизации
 - **Кастомные компоненты** — переиспользуемые UI-компоненты в `shared/ui`
 - **Адаптивная вёрстка** — поддержка мобильных устройств через Tailwind брейкпоинты
 - **Компонентный подход** — переиспользуемые виджеты в `widgets/`
-
-## 📱 Маршрутизация
-
-| Маршрут | Страница | Описание |
-|---------|----------|----------|
-| `/` | — | Редирект на дашборд |
-| `/dashboard` | DashboardPage | Главная страница дашборда |
-| `/dashboard/inbox` | DashboardPage | Входящие уведомления |
-| `/dashboard/comments` | DashboardPage | Комментарии |
-| `/dashboard/tasks` | TasksPage | Управление задачами |
-| `/dashboard/teamSettings` | DashboardPage | Настройки команды |
-| `/dashboard/workSpace/:workSpace` | DashboardPage | Страница воркспейса |
-| `/dashboard/channel/:channel` | DashboardPage | Страница канала |
-| `/dashboard/directMessage/:directMessage` | DashboardPage | Личные сообщения |
-| `*` | — | Страница 404 |
 
 ## 📚 Используемые утилиты
 
@@ -237,8 +140,6 @@ tailwind-test/
 | Store | Описание |
 |-------|----------|
 | `useTabStore` | Управление вкладками задач (активная вкладка, переключение) |
-| `useCartStore` | Корзина (если реализована) |
-| `useFavoriteStore` | Избранное (если реализовано) |
 
 ## 🎯 Компоненты UI
 
